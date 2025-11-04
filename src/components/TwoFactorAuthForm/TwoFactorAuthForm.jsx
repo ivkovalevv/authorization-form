@@ -8,7 +8,7 @@ import Logo from "../../UI/Logo/Logo";
 const { Text } = Typography;
 
 const TwoFactorAuthForm = (props) => {
-    const [formCode, setformCode] = useState('');
+    const [formCode, setformCode] = useState([]);
     const [isTimesUp, setIsTimesUp] = useState(false);
     const [isFormFilled, setIsFormFilled] = useState(false);
     const [isFormInvalid, setIsFormInvalid] = useState(true);
@@ -21,13 +21,13 @@ const TwoFactorAuthForm = (props) => {
 
         const timeOut = setTimeout(() => {
             setIsTimesUp(true);
-        }, 3000);
+        }, 10_000);
         
         return () => clearTimeout(timeOut);
     }, [isFormFilled]);
 
     useEffect(() => {
-        const filled = formCode.length === 6;
+        const filled = formCode.join('').trim().length === 6;
         setIsFormFilled(filled);
         
         if (filled) {
@@ -37,7 +37,7 @@ const TwoFactorAuthForm = (props) => {
 
     function getNewCode(){
         setIsTimesUp(false);
-        setTimeout(() => setIsTimesUp(true), 3000);
+        setTimeout(() => setIsTimesUp(true), 10_000);
     }
     
     function handleClickBack(){
@@ -55,8 +55,7 @@ const TwoFactorAuthForm = (props) => {
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(formCode.join(''))
-        formCode.join('') !== '111111' ? setIsFormInvalid(false) : setIsFormInvalid(true)
+        formCode.join('').trim() !== import.meta.env.VITE_VALID_CODE ? setIsFormInvalid(false) : setIsFormInvalid(true)
     }
 
     return (

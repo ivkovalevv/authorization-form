@@ -1,9 +1,11 @@
+/* all clapm functions from 1440px to 320px */
+
 .form-wrapper{
     position: relative;
     width: 90%;
     max-width: 440px;
     height: fit-content;
-    padding: clamp(0.75rem, 0.3333rem + 1.8519vw, 2rem); /* 32px > 12px */
+    padding: clamp(0.75rem, 0.3929rem + 1.7857vw, 2rem); /* 32px > 12px */
     background-color: var(--white-color);
     border-radius: var(--border-radius);
     display: flex;
@@ -17,22 +19,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin-bottom: 4px;
+    padding: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem); /* 20px > 10px */
+    margin-bottom: clamp(0.125rem, 0.0893rem + 0.1786vw, 0.25rem); /* 4px > 2px */
 }
 
 .form-heading{
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 4px;
+    font-size: clamp(1.125rem, 0.9464rem + 0.8929vw, 1.75rem); /* 28px > 18px */
+    margin-bottom: clamp(0.125rem, 0.0893rem + 0.1786vw, 0.25rem); /* 4px > 2px */
 }
 
 .form-description{
     text-align: center;
-    font-size: 16px;
-    margin-bottom: 4px;
+    font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem); /* 16px > 14px */
+    margin-bottom: clamp(0.125rem, 0.0893rem + 0.1786vw, 0.25rem); /* 4px > 2px */
 }
 
 .form{
-    margin-top: 20px;
+    margin-top: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem); /* 20px > 10px */
 }

@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Typography } from "antd";
 import { Input, Button, Flex } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import "./login-form.css";
 import Logo from "../../UI/Logo/Logo";
+import { Context } from "../../main";
 
 const { Text } = Typography;
 
 const LoginForm = (props) => {
+    const { user } = useContext(Context);
     const [isFormFilled, setIsFormFilled] = useState(false);
     const [formData, setFormData] = useState({
-        email: '',
-        password: '',
+        email: user.email,
+        password: user.password,
     });
 
     useEffect(() => {
@@ -27,6 +29,15 @@ const LoginForm = (props) => {
         ...formData,
         [e.target.name]: e.target.value
         });
+
+        switch(e.target.name){
+            case 'email':
+                user.setEmail(e.target.value);
+            case 'password':
+                user.setPassword(e.target.value);
+            default:
+                return;
+        }
     };
 
     function handleSubmit(e){
@@ -36,7 +47,7 @@ const LoginForm = (props) => {
 
     return (
         <>
-            <div className="form-logo-wrapper">
+        <div className="form-logo-wrapper">
             <Logo/>
         </div>
         <Text strong className="form-heading">Sign in to your account to continue</Text>

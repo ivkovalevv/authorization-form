@@ -1,23 +1,37 @@
+/* all clapm functions from 1440px to 320px */
+
 .form .ant-otp input{
-    min-height: 60px;
-    font-size: 24px !important;
+    min-height: clamp(2.8125rem, 2.5446rem + 1.3393vw, 3.75rem); /* 60px > 45px */
+    font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem) !important; /* 24px > 16px */
     font-weight: 600;
     color: var(--text-color);
 }
 
+input::-webkit-outer-spin-button{
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-webkit-inner-spin-button{
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .button-back{
     position: absolute;
-    top: 32px;
-    left: 32px;
+    top: clamp(0.3125rem, -0.1696rem + 2.4107vw, 2rem);/* 32px > 5px */
+    left: clamp(0rem, -0.5714rem + 2.8571vw, 2rem); /* 32px > 0px */
 }
 
 .button-back-icon svg{
-    width: 18px;
-    height: 18px;
+    width: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem); /* 18px > 14px */
+    height: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem); /* 18px > 14px */
     fill: var(--text-color);
 }
 
 .input-invalid{
     margin-top: 4px;
-    font-size: 14px;
+    font-size: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem); /* 14px > 12px */
 }
