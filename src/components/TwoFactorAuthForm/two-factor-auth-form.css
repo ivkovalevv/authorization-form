@@ -1,0 +1,23 @@
+.form .ant-otp input{
+    min-height: 60px;
+    font-size: 24px !important;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.button-back{
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+
+.button-back-icon svg{
+    width: 18px;
+    height: 18px;
+    fill: var(--text-color);
+}
+
+.input-invalid{
+    margin-top: 4px;
+    font-size: 14px;
+}

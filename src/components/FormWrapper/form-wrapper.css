@@ -1,4 +1,5 @@
 .form-wrapper{
+    position: relative;
     width: 90%;
     max-width: 440px;
     height: fit-content;
@@ -11,7 +12,7 @@
     justify-content: center;
 }
 
-.form-wrapper__logo-wrapper{
+.form-logo-wrapper{
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,8 +21,18 @@
     margin-bottom: 4px;
 }
 
-.form-wrapper__description{
+.form-heading{
     text-align: center;
     font-size: 28px;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
+}
+
+.form-description{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.form{
+    margin-top: 20px;
 }
