@@ -1,0 +1,27 @@
+.form-wrapper{
+    width: 90%;
+    max-width: 440px;
+    height: fit-content;
+    padding: clamp(0.75rem, 0.3333rem + 1.8519vw, 2rem); /* 32px > 12px */
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper__logo-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 4px;
+}
+
+.form-wrapper__description{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}

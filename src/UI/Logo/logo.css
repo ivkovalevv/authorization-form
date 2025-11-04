@@ -1,0 +1,16 @@
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle{
+    width: 24px;
+    height: 24px;
+    border: 6px solid var(--primary-color);
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.logo-text{
+    font-size: 16px;
+}
