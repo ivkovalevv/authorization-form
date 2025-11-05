@@ -31,13 +31,13 @@ const LoginForm = ({ setIsPrimaryLogin }) => {
         setIsFormInvalid('');
         setFormData(prev => ({
         ...prev,
-        [name]: value
+        [name]: value.toLowerCase()
         }));
 
         if (name === 'email') {
-            user.setEmail(value);
+            user.setEmail(value.toLowerCase());
         } else if (name === 'password') {
-            user.setPassword(value);
+            user.setPassword(value.toLowerCase());
         }
     };
 
