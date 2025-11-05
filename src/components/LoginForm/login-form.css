@@ -25,3 +25,9 @@
 .ant-btn-variant-solid:disabled *{
     color: var(--text-placeholder-color);
 }
+
+.loading-icon svg{
+    width: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem) !important; /* 24px > 16px */
+    height: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem) !important; /* 24px > 16px */
+    fill: var(--primary-color);
+}

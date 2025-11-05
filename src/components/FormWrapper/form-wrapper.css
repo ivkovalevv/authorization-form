@@ -39,3 +39,13 @@
 .form{
     margin-top: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem); /* 20px > 10px */
 }
+
+.alert{
+    position: fixed;
+    width: 400px;
+    max-width: 95%;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+    z-index: 1;
+}

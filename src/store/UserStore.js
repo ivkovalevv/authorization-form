@@ -1,7 +1,17 @@
 export default class UserStore {
     constructor(){
-        this._email = '',
+        this._id = null,
+        this._email = ''
         this._password = '';
+        this._name = '';
+    }
+
+    get id(){
+        return this._id;
+    }
+
+    setId(id){
+        this._id = id;
     }
 
     get email(){
@@ -18,5 +28,13 @@ export default class UserStore {
 
     setPassword(password){
         this._password = password;
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    setName(name){
+        this._name = name;
     }
 }
